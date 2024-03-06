@@ -36,7 +36,11 @@ function FeedbackItem({ item }) {
 }
 
 FeedbackItem.propTypes = {
-  item: PropTypes.object,
+  item: PropTypes.shape({
+    id: PropTypes.string,
+    text: PropTypes.string,
+    rating: PropTypes.number,
+  }),
 };
 
 export default FeedbackItem;

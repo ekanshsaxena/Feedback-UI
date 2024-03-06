@@ -1,16 +1,16 @@
 const feedbackData = [
   {
-    id: '1',
+    id: 1,
     rating: 10,
     text: 'This is feedback item 1',
   },
   {
-    id: '2',
+    id: 2,
     rating: 9,
     text: 'This is feedback item 2',
   },
   {
-    id: '3',
+    id: 3,
     rating: 8,
     text: 'This is feedback item 3',
   },
