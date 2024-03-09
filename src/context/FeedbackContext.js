@@ -15,8 +15,10 @@ export const FeedbackProvider = ({ children }) => {
     fetchFeedback();
   }, []);
 
+  const url = 'https://feedback-backend-4cq6.onrender.com';
+
   const fetchFeedback = async () => {
-    const response = await fetch(`/feedback`);
+    const response = await fetch(`${url}/`);
     const data = await response.json();
     setFeedback(data);
     setIsLoading(false);
@@ -30,7 +32,7 @@ export const FeedbackProvider = ({ children }) => {
   };
 
   const addFeedback = async (newFeedback) => {
-    const response = await fetch('/feedback', {
+    const response = await fetch(`${url}/addFeedback`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,12 +44,16 @@ export const FeedbackProvider = ({ children }) => {
   };
 
   const deleteFeedback = async (id) => {
-    await fetch(`/feedback/${id}`, { method: 'DELETE' });
+    await fetch(`${url}/deleteFeedback/${id}`, {
+      method: 'DELETE',
+    });
     setFeedback(feedback.filter((item) => item.id !== id));
   };
 
   const updateFeedback = async (id, updatedFeedback) => {
-    const response = await fetch(`/feedback/${id}`, {
+    console.log(id);
+    console.log(updateFeedback);
+    const response = await fetch(`${url}/updateFeedback/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

@@ -37,7 +37,7 @@ function FeedbackItem({ item }) {
 
 FeedbackItem.propTypes = {
   item: PropTypes.shape({
-    id: PropTypes.string,
+    id: PropTypes.number,
     text: PropTypes.string,
     rating: PropTypes.number,
   }),
