@@ -1,3 +1,7 @@
+# Running the app
+Make sure to first run the backend server, by clicking this: https://feedback-backend-4cq6.onrender.com/
+Then you can open the app using this link: https://main--feedbackui-learningproject.netlify.app/
+
 # Deployment
 
 - Frontend deployed here: https://main--feedbackui-learningproject.netlify.app/
